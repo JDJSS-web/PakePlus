@@ -1,32 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PakePlus App</title>
-        <script type="module" src="/main.js" defer></script>
-    </head>
-
-    <body>
-        <main class="container">
-            <h1>Welcome to PakePlus</h1>
-            <form class="row" id="greet-form">
-                <input id="inputValue" placeholder="Enter a something..." />
-            </form>
-            <div class="resultBox">
-                <span>result: </span>
-                <span id="result"></span>
-            </div>
-            <div class="invokeBox">
-                <button id="openUrl">open_url_browser</button>
-                <button id="openUrlNew">open_url_new</button>
-                <button id="runCommand">run_command</button>
-                <button id="downloadFile">download_file</button>
-                <button id="getExeDir">get_exe_dir</button>
-                <button id="getEnvVar">get_env_var</button>
-                <button id="findPort">find_port</button>
-            </div>
-        </main>
-    </body>
+<html>
+<head>
+<meta charset="gbk">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>
+小工具
+</title>
+<link rel="icon" href="img/ICON.png" type="image/x-icon">
+<link rel="shortcut icon" href="img/ICON.png" type="image/x-icon">
+<link rel="stylesheet" href="css/FSS.css" type="text/css">
+<link rel="stylesheet" href="css/ESS.css" type="text/css">
+<link rel="stylesheet" href="css/KSS.css" type="text/css">
+<link rel="stylesheet" href="css/PSS.css" type="text/css">
+<link rel="stylesheet" href="css/Button ESS.css" type="text/css">
+<script type="text/javascript">
+document.addEventListener('plusready', function(){/*console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")*/});
+</script>
+</head>
+<body background="img/Background Image.png">
+<div id="main-container">
+<dialog id="first-page" open="open">
+<container style-type="A">
+<a>
+Unicode工具
+</a>
+<a>
+颜色代码转换工具
+</a>
+<a>
+进位制转换工具
+</a>
+</container>
+</dialog>
+<dialog id="second-page">
+<aside id="tool-1">
+<control-selector style-type="A">
+<control-item select="select">
+Unicode转字符
+</control-item>
+<control-item select="normal">
+字符转Unicode
+</control-item>
+</control-selector>
+<form style-type="A">
+<label>
+Unicode
+</label>
+<input type="text" name="main-input"/>
+</form>
+<form style-type="A">
+<label>
+字符转换结果
+</label>
+<output copy-code="tool-1">
+</output>
+</form>
+<button type="submit" style-type="A">
+开始转换
+</button>
+<button type="button" style-type="A" copy-target="tool-1">
+复制结果
+</button>
+<button type="reset" style-type="A">
+重置表单
+</button>
+<i style-type="A">
+</i>
+</aside>
+</dialog>
+<dialog id="third-page">
+<aside id="tool-2">
+<top-box style-type="A">
+<top-item select="select">
+RGBA to ALL
+</top-item>
+<top-item select="normal">
+HSLA to ALL
+</top-item>
+<top-item select="normal">
+HSVA to ALL
+</top-item>
+<top-item select="normal">
+HEXA to ALL
+</top-item>
+<top-item select="normal">
+CMYKA to ALL
+</top-item>
+</top-box>
+<form style-type="A">
+<label>
+RGBA
+</label>
+<input type="text" name="main-input"/>
+</form>
+<form style-type="A">
+<label>
+HSLA结果
+</label>
+<output copy-code="tool-2-1">
+</output>
+</form>
+<form style-type="A">
+<label>
+HSVA结果
+</label>
+<output copy-code="tool-2-2">
+</output>
+</form>
+<form style-type="A">
+<label>
+HEXA结果
+</label>
+<output copy-code="tool-2-3">
+</output>
+</form>
+<form style-type="A">
+<label>
+CMYKA结果
+</label>
+<output copy-code="tool-2-4">
+</output>
+</form>
+<button type="submit" style-type="A">
+开始转换
+</button>
+<button type="button" style-type="A" copy-target="tool-2-1">
+复制HSLA结果
+</button>
+<button type="button" style-type="A" copy-target="tool-2-2">
+复制HSVA结果
+</button>
+<button type="button" style-type="A" copy-target="tool-2-3">
+复制HEXA结果
+</button>
+<button type="button" style-type="A" copy-target="tool-2-4">
+复制CMYKA结果
+</button>
+<button type="reset" style-type="A">
+重置表单
+</button>
+<i style-type="A">
+</i>
+</aside>
+</dialog>
+<dialog id="fourth-page">
+<aside id="tool-3">
+<top-form style-type="A">
+<form-item style-type="A">
+<label>
+进位制数1
+</label>
+<input type="text" name="selector-input">
+</form-item>
+<form-item style-type="A">
+<label>
+进位制数2
+</label>
+<input type="text" name="selector-input">
+</form-item>
+</top-form>
+<form style-type="A">
+<label>
+</label>
+<input type="text" name="main-input"/>
+</form>
+<form style-type="A">
+<label>
+</label>
+<output copy-code="tool-3">
+</output>
+</form>
+<button type="submit" style-type="A">
+开始转换
+</button>
+<button type="button" style-type="A" copy-target="tool-3">
+复制结果
+</button>
+<button type="reset" style-type="A">
+重置表单
+</button>
+<i style-type="A">
+</i>
+</aside>
+</dialog>
+</div>
+<script type="text/javascript" src="extension/Javascript Event Cancel.js">
+</script>
+<script type="text/javascript" src="extension/Javascript Event Query.js">
+</script>
+<script type="text/javascript" src="extension/mobile-detect.js">
+</script>
+<script type="text/javascript" src="extension/clipboard.js">
+</script>
+<script type="text/javascript" src="extension/Get Element Index.js">
+</script>
+<script type="text/javascript" src="extension/Color Code.js">
+</script>
+<script type="text/javascript" src="extension/Scale.js">
+</script>
+<script type="text/javascript" src="js/Execution.js">
+</script>
+</body>
 </html>
