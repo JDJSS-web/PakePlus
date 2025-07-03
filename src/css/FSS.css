@@ -1,0 +1,11 @@
+@charset "gbk";
+@font-face
+{
+font-family:Font1;
+src:url("../font/Cambria-Italic.woff2");
+}
+@font-face
+{
+font-family:Font2;
+src:url("../font/HYKTJ.woff2");
+}
