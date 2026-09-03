@@ -1,0 +1,60 @@
+@charset "gbk";
+/*Element Style Sheet*/
+embed[situation="icon-exporting"]
+{
+display:inline-block;
+padding:0;
+border-width:0;
+margin:0;
+transform-origin:50% 50% 0;
+transform:scale(1,1);
+grid-area:1/1/2/2;
+overflow:hidden;
+transition:transform 0.1s cubic-bezier(0.4,0,0.2,1);
+aspect-ratio:var(--ES-embed-aspect-ratio);
+}
+embed[condition="enabled"][situation="icon-exporting"]
+{
+filter:unset;
+pointer-events:auto;
+}
+embed[condition="enabled"][situation="icon-exporting"]:hover
+{
+transform-origin:50% 50% 0;
+transform:scale(1.1,1.1);
+}
+embed[condition="enabled"][situation="icon-exporting"]:active
+{
+transform-origin:50% 50% 0;
+transform:scale(1,1);
+}
+embed[condition="disabled"][situation="icon-exporting"]
+{
+filter:grayscale(100%);
+pointer-events:none;
+}
+/*Portrait Style Sheet*/
+@media screen and (orientation:portrait)
+{
+embed[situation="icon-exporting"]
+{
+width:calc(var(--formal-width) * 0.42);
+height:auto;
+}
+}
+/*Landscape Style Sheet*/
+@media screen and (orientation:landscape)
+{
+embed[situation="icon-exporting"]
+{
+width:auto;
+height:calc(var(--formal-height) * 0.25);
+}
+}
+/*Property Style Sheet*/
+@property --ES-embed-aspect-ratio
+{
+syntax:"*";
+inherits:false;
+initial-value:1/1;
+}
