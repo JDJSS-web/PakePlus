@@ -1,0 +1,19 @@
+@charset "gbk";
+@namespace SVG url(http://www.w3.org/2000/svg);
+/*Element Style Sheet*/
+SVG|svg
+{
+flex:none;
+aspect-ratio:var(--IPS-svg-aspect-ratio);
+width:calc(var(--formal-minimum-size) * 0.86 * 0.96);
+height:auto;
+}
+/*Portrait Style Sheet*/
+/*Landscape Style Sheet*/
+/*Property Style Sheet*/
+@property --IPS-svg-aspect-ratio
+{
+syntax:"*";
+inherits:false;
+initial-value:1/1;
+}
