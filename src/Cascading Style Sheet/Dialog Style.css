@@ -1,0 +1,117 @@
+@charset "gbk";
+/*Element Style Sheet*/
+dialog
+{
+padding:0;
+margin:0;
+transform-origin:50% 50% 0;
+position:fixed;
+inset:50% 0 0 50%;
+z-index:1;
+}
+dialog#command-area
+{
+border-width:0;
+transform:translate(-50%,-50%) scale(1,1);
+flex-direction:row;
+flex-wrap:nowrap;
+align-content:center;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+transition:transform 0.1s cubic-bezier(0.4,0,0.2,1);
+width:calc(var(--formal-minimum-size) * 0.86);
+height:calc(var(--formal-height) * 0.04);
+}
+dialog#command-area:has(textarea#command-input:focus)
+{
+transform:translate(-50%,-50%) scale(1.1,1.1);
+}
+dialog#command-area[open]
+{
+display:inline-flex;
+}
+dialog#icon-previewer
+{
+background-color:#FFFFFF40;
+border-width:0;
+border-radius:calc(var(--formal-minimum-size) * 0.43 * 0.04);
+flex-direction:row;
+flex-wrap:nowrap;
+align-content:center;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+aspect-ratio:var(--DS-dialog-aspect-ratio);
+width:calc(var(--formal-minimum-size) * 0.86);
+height:auto;
+}
+dialog#icon-previewer[open]
+{
+display:inline-flex;
+}
+dialog#icon-exporter
+{
+background-color:#FFFFFF40;
+border-width:0;
+align-content:center;
+justify-content:center;
+align-items:center;
+justify-items:center;
+overflow:hidden;
+aspect-ratio:var(--DS-dialog-aspect-ratio);
+}
+dialog#icon-exporter[open]
+{
+display:inline-grid;
+}
+dialog:not(dialog#command-area)
+{
+transform:translate(-50%,-50%);
+}
+dialog:not(dialog#icon-previewer,dialog#icon-exporter)
+{
+background-color:transparent;
+}
+dialog:modal
+{
+background-color:transparent;
+}
+dialog:-internal-dialog-in-top-layer
+{
+min-width:unset;
+max-width:unset;
+min-height:unset;
+max-height:unset;
+}
+/*Portrait Style Sheet*/
+@media screen and (orientation:portrait)
+{
+dialog#icon-exporter
+{
+border-radius:calc(var(--formal-minimum-size) * 0.25 * 0.12);
+grid-template-rows:calc(var(--formal-minimum-size) * 0.42);
+grid-template-columns:calc(var(--formal-minimum-size) * 0.42);
+width:calc(var(--formal-minimum-size) * 0.5);
+height:auto;
+}
+}
+/*Landscape Style Sheet*/
+@media screen and (orientation:landscape)
+{
+dialog#icon-exporter
+{
+border-radius:calc(var(--formal-minimum-size) * 0.16 * 0.12);
+grid-template-rows:calc(var(--formal-minimum-size) * 0.25);
+grid-template-columns:calc(var(--formal-minimum-size) * 0.25);
+width:calc(var(--formal-minimum-size) * 0.32);
+height:auto;
+}
+}
+/*Property Style Sheet*/
+@property --DS-dialog-aspect-ratio
+{
+syntax:"*";
+inherits:false;
+initial-value:1/1;
+}
