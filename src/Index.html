@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN" oncontextmenu="return false" onselectstart="return false">
+<head>
+<meta charset="gbk">
+<title>
+图标生成器
+</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+<meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta HTTP-EQUIV="expires" CONTENT="0">
+<link rel="icon" href="File/Image/IMG/ICON.webp" type="image/x-icon">
+<link rel="shortcut icon" href="File/Image/IMG/ICON.webp" type="image/x-icon">
+<link rel="stylesheet" href="Cascading Style Sheet/Font Style.css" type="text/css">
+<link rel="stylesheet" href="Cascading Style Sheet/Root Style.css" type="text/css">
+<link rel="stylesheet" href="Cascading Style Sheet/Dialog Style.css" type="text/css">
+<link rel="stylesheet" href="Cascading Style Sheet/Command Input Style.css" type="text/css">
+<link rel="stylesheet" href="Cascading Style Sheet/ICON Previewer Style.css" type="text/css">
+<link rel="stylesheet" href="Cascading Style Sheet/Exporting Style.css" type="text/css">
+</head>
+<body onload="main()" onresize="resize()" onkeydown="keyController()">
+<template-list>
+<template id="type-a">
+<svg id="icon" data-name="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 8000 8000">
+<g>
+</g>
+<g transform-origin="4000 4000 0">
+</g>
+</svg>
+</template>
+<template id="type-b">
+<svg id="icon" data-name="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 8000 8000">
+<defs>
+<linearGradient id="figure-fill">
+</linearGradient>
+</defs>
+<g>
+</g>
+<g transform-origin="4000 4000 0" fill="url('#figure-fill')">
+</g>
+</svg>
+</template>
+<template id="type-c">
+<svg id="icon" data-name="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 8000 8000">
+<defs>
+<linearGradient id="background-fill">
+</linearGradient>
+</defs>
+<g>
+</g>
+<g transform-origin="4000 4000 0">
+</g>
+</svg>
+</template>
+<template id="type-d">
+<svg id="icon" data-name="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 8000 8000">
+<defs>
+<linearGradient id="background-fill">
+</linearGradient>
+<linear-gradient id="figure-fill">
+</linear-gradient>
+</defs>
+<g>
+</g>
+<g transform-origin="4000 4000 0" fill="url('#figure-fill')">
+</g>
+</svg>
+</template>
+<template id="type-e">
+<svg id="icon" data-name="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 8000 8000">
+<defs>
+<pattern id="background-fill" x="0" y="0" width="8000" height="8000" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" preserveAspectRatio="xMidYMid meet">
+<image xlink:href="" x="0" y="0" width="8000" height="8000">
+</image>
+</pattern>
+</defs>
+<g>
+</g>
+<g transform-origin="4000 4000 0">
+</g>
+</svg>
+</template>
+<template id="type-f">
+<svg id="icon" data-name="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 8000 8000">
+<defs>
+<pattern id="background-fill" x="0" y="0" width="8000" height="8000" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" preserveAspectRatio="xMidYMid meet">
+<image xlink:href="" x="0" y="0" width="8000" height="8000">
+</image>
+</pattern>
+<linear-gradient id="figure-fill">
+</linear-gradient>
+</defs>
+<g>
+</g>
+<g transform-origin="4000 4000 0" fill="url('#figure-fill')">
+</g>
+</svg>
+</template>
+</template-list>
+<a id="icon-exporting">
+</a>
+<div id="content-container">
+<dialog id="command-area">
+<textarea id="command-input" wrap="off" onkeydown="commandProcessor()">
+</textarea>
+</dialog>
+<dialog id="icon-previewer">
+</dialog>
+<dialog id="icon-exporter">
+<embed src="File/Image/IMG/SVG ICON.webp" type="image/webp" condition="disabled" situation="icon-exporting" target="icon-exporting" onclick="iconExporting()">
+</embed>
+</dialog>
+</div>
+<script type="text/javascript" src="Extension/Element Selector.js">
+</script>
+<script type="text/javascript" src="Extension/Name Space Selector.js">
+</script>
+<script type="text/javascript" src="Extension/Dragon Query.js">
+</script>
+<script type="text/javascript" src="Extension/File Reader.js">
+</script>
+<script type="text/javascript" src="Extension/Blob Path Acquirer.js">
+</script>
+<script type="text/javascript" src="Extension/Command Box.js">
+</script>
+
+<script type="text/javascript" src="Javascript/Execution.js">
+</script>
+<!--<script type="text/javascript" src="">
+</script>-->
+</body>
+</html>
