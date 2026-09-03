@@ -1,0 +1,21 @@
+@charset "gbk";
+@font-face
+{
+font-family:Andrich;
+src:url("../Font/Andrich.woff2");
+}
+@font-face
+{
+font-family:FZXKJT;
+src:url("../Font/FZXKJT.woff2");
+}
+@font-face
+{
+font-family:FZXKJF;
+src:url("../Font/FZXKJF.woff2");
+}
+@font-face
+{
+font-family:FZXK-B-S04;
+src:url("../Font/FZXK-B-S04.woff2");
+}
